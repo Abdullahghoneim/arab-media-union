@@ -10,7 +10,9 @@
       />
       <p class="news-title">
         {{ ls.title }} <br />
-        <a href="#" class="btn btn-link">المزيد .......</a>
+        <a href="#" [routerLink]="['/last-news/', ls.id]" class="btn btn-link"
+          >المزيد .......</a
+        >
       </p>
     </div>
   </div>

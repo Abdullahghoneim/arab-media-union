@@ -12,6 +12,7 @@ export class NewsService {
   newsCollection: AngularFirestoreCollection<any>;
   lastNews: Observable<any[]>;
   newsDoc: AngularFirestoreDocument<any>;
+  new: Observable<any>;
   constructor(private db: AngularFirestore) {
     //   get news collection with ID
     this.newsCollection = this.db.collection<any>("news");
@@ -28,5 +29,10 @@ export class NewsService {
   // get all news
   getNews() {
     return this.lastNews;
+  }
+  getNew(id) {
+    this.newsDoc = this.db.doc(`news/${id}`);
+    this.new = this.newsDoc.valueChanges();
+    return this.new;
   }
 }

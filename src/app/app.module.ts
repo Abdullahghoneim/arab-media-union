@@ -15,6 +15,7 @@ import { AngularFireModule } from "@angular/fire/";
 import { environment } from "../environments/environment";
 // services
 import { NewsService } from "../services/News.Service";
+import { LastNewsDetalisComponent } from './components/last-news-detalis/last-news-detalis.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NewsService } from "../services/News.Service";
     AboutUsComponent,
     LastNewsComponent,
     ConnectUsComponent,
-    FooterComponent
+    FooterComponent,
+    LastNewsDetalisComponent
   ],
   imports: [
     BrowserModule,
