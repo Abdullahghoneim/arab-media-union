@@ -1,5 +1,35 @@
 <div class="main-new">
   <div class="contant">
-    اختبار
+    <div class="bd-example">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#carouselExampleCaptions"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img [src]="lastNew[0].img" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="title bg-success p-4">{{ lastNew[0].title }}</h5>
+            </div>
+          </div>
+          <div *ngFor="let ls of lastNew" class="carousel-item">
+            <img [src]="ls.img" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="title bg-success p-4">{{ ls.title }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

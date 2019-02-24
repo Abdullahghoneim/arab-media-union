@@ -7,9 +7,14 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { HomeComponent } from "./components/home/home.component";
 import { UpperbarComponent } from "./components/upperbar/upperbar.component";
 import { MainNewComponent } from "./components/main-new/main-new.component";
-import { AboutUsComponent } from './components/about-us/about-us.component';
-import { LastNewsComponent } from './components/last-news/last-news.component';
-import { ConnectUsComponent } from './components/connect-us/connect-us.component';
+import { AboutUsComponent } from "./components/about-us/about-us.component";
+import { LastNewsComponent } from "./components/last-news/last-news.component";
+import { ConnectUsComponent } from "./components/connect-us/connect-us.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { AngularFireModule } from "@angular/fire/";
+import { environment } from "../environments/environment";
+// services
+import { NewsService } from "../services/News.Service";
 
 @NgModule({
   declarations: [
@@ -20,10 +25,16 @@ import { ConnectUsComponent } from './components/connect-us/connect-us.component
     MainNewComponent,
     AboutUsComponent,
     LastNewsComponent,
-    ConnectUsComponent
+    ConnectUsComponent,
+    FooterComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, AngularFirestoreModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
+  ],
+  providers: [NewsService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

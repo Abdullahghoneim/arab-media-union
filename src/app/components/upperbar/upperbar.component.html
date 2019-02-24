@@ -1,6 +1,11 @@
-<marquee behavior="" direction="rtl"
-  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda natus
-  voluptates tempora tempore explicabo quo deserunt doloremque vero id totam
-  fugiat autem beatae eveniet, perferendis harum nihil praesentium sequi
-  deleniti.</marquee
->
+<marquee behavior="">
+  <ul>
+    <li
+      style="display: inline-block"
+      class="marquee-list mx-5 "
+      *ngFor="let ls of lastNews"
+    >
+      {{ ls.title }}
+    </li>
+  </ul>
+</marquee>
