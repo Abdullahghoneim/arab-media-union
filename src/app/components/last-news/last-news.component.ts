@@ -7,11 +7,11 @@ import { NewsService } from "../../../services/News.Service";
 })
 export class LastNewsComponent implements OnInit {
   lastNews;
-  constructor(private newsService: NewsService) {}
-
-  ngOnInit() {
+  constructor(private newsService: NewsService) {
     this.newsService.getNews().subscribe(news => {
       this.lastNews = news;
     });
   }
+
+  ngOnInit() {}
 }
