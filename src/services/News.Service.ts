@@ -14,7 +14,6 @@ export class NewsService {
   newsDoc: AngularFirestoreDocument<any>;
   new: Observable<any>;
   constructor(private db: AngularFirestore) {
-    //   get news collection with ID
     this.newsCollection = this.db.collection<any>("news");
     this.lastNews = this.newsCollection.snapshotChanges().pipe(
       map(actions =>

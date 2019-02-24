@@ -15,7 +15,7 @@ import { AngularFireModule } from "@angular/fire/";
 import { environment } from "../environments/environment";
 // services
 import { NewsService } from "../services/News.Service";
-import { LastNewsDetalisComponent } from './components/last-news-detalis/last-news-detalis.component';
+import { LastNewsDetalisComponent } from "./components/last-news-detalis/last-news-detalis.component";
 
 @NgModule({
   declarations: [
@@ -39,4 +39,8 @@ import { LastNewsDetalisComponent } from './components/last-news-detalis/last-ne
   providers: [NewsService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  constructor(private newsService: NewsService) {
+    this.newsService.getNews();
+  }
+}
