@@ -1,0 +1,21 @@
+.lastNews {
+  text-align: right;
+  img:first-child {
+    margin-top: 40px;
+  }
+  img {
+    display: inline-block;
+    border: 2px solid #eeee;
+    margin-bottom: 3rem;
+  }
+  .news-title {
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-right: 2rem;
+    span {
+      text-align: right;
+      font-size: 2rem;
+      float: right;
+    }
+  }
+}

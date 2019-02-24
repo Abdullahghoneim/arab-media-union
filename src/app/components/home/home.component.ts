@@ -12,8 +12,10 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.newsService.getNews().subscribe(news => {
-      this.lastNews = news;
-      console.log(this.lastNews);
+      for (let i = 0; i < 2; i++) {
+        console.log(news[i]);
+        this.lastNews = news[i];
+      }
     });
   }
 }

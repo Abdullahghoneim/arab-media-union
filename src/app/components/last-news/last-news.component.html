@@ -1,3 +1,17 @@
-<p>
-  last-news works!
-</p>
+<div dir="rtl" class="lastNews mt-5">
+  <div class="new ">
+    <div *ngFor="let ls of lastNews" class="">
+      <img
+        [src]="ls.img"
+        width="100px"
+        height="100px"
+        alt="ls.title"
+        srcset=""
+      />
+      <p class="news-title">
+        {{ ls.title }} <br />
+        <a href="#" class="btn btn-link">المزيد .......</a>
+      </p>
+    </div>
+  </div>
+</div>
