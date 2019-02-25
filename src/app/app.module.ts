@@ -20,6 +20,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { NationalOfficesComponent } from './components/national-offices/national-offices.component';
 import { MediaLiberaryComponent } from './components/media-liberary/media-liberary.component';
+import { PhotosLibComponent } from './components/media-liberary/photos-lib/photos-lib.component';
+import { ViedosLibComponent } from './components/media-liberary/viedos-lib/viedos-lib.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,9 @@ import { MediaLiberaryComponent } from './components/media-liberary/media-libera
     FooterComponent,
     LastNewsDetalisComponent,
     NationalOfficesComponent,
-    MediaLiberaryComponent
+    MediaLiberaryComponent,
+    PhotosLibComponent,
+    ViedosLibComponent
   ],
   imports: [
     BrowserModule,
