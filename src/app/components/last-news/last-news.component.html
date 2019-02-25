@@ -1,10 +1,10 @@
-<div dir="rtl" class="lastNews mt-5">
+<!-- <div dir="rtl" class="lastNews mt-5">
   <h2 class="float-right">أخر الاخبار</h2>
   <br /><br />
   <div class="new ">
     <div *ngFor="let ls of lastNews" class="">
       <img
-        [src]="ls.img"
+        [src]="ls.src"
         width="100px"
         height="100px"
         alt="ls.title"
@@ -12,10 +12,17 @@
       />
       <p class="news-title">
         {{ ls.title }} <br />
-        <a href="#" [routerLink]="['/last-news/', ls.id]" class="btn btn-link"
+        <a href="#" [routerLink]="['/last-news/', ls.key]" class="btn btn-link"
           >المزيد .......</a
         >
       </p>
     </div>
+  </div>
+</div> -->
+
+<div class="mt-3" dir="rtl">
+  <h2 class="float-right">أخر الاخبار</h2>
+  <div class="row">
+    <div *ngFor="let ls of lastNews" class="col-md-6"></div>
   </div>
 </div>

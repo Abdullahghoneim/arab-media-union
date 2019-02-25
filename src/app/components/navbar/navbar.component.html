@@ -39,24 +39,59 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" routerLink="/connect-us">اتصل بنا </a>
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/national-offices"
+            tabindex="-1"
+            routerLinkActive="active"
+            aria-disabled="true"
+          >
+            مكاتب دولية
+          </a>
         </li>
         <li class="nav-item">
           <a
             class="nav-link"
             href="#"
-            routerLink="/about-us"
-            tabindex="-1"
+            routerLink="/media-liberary"
             routerLinkActive="active"
-            aria-disabled="true"
-            >عنا</a
-          >
+            >المكتبة الاعلامية
+          </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"
-            >الفاعليات</a
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
           >
+            المزيد
+          </a>
+          <div
+            class="dropdown-menu text-right"
+            aria-labelledby="navbarDropdown"
+          >
+            <a class="dropdown-item" href="#">الفاعليات</a>
+            <a class="dropdown-item" href="#" routerLink="/connect-us"
+              >اتصل بنا</a
+            >
+            <a
+              class="dropdown-item"
+              href="#"
+              routerLink="/about-us"
+              tabindex="-1"
+              routerLinkActive="active"
+              aria-disabled="true"
+              >عنا</a
+            >
+          </div>
         </li>
+
+        <li class="nav-item"></li>
       </ul>
     </div>
   </div>

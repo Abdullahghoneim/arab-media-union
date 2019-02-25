@@ -1,37 +1,31 @@
 import { Injectable } from "@angular/core";
 import {
-  AngularFirestore,
-  AngularFirestoreCollection,
-  AngularFirestoreDocument
-} from "@angular/fire/firestore";
+  AngularFireDatabase,
+  AngularFireList,
+  AngularFireObject
+} from "@angular/fire/database";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
-
+import { HttpClient } from "@angular/common/http";
 @Injectable()
 export class NewsService {
-  newsCollection: AngularFirestoreCollection<any>;
-  lastNews: Observable<any[]>;
-  newsDoc: AngularFirestoreDocument<any>;
+  lastNews: Observable<any>;
   new: Observable<any>;
-  constructor(private db: AngularFirestore) {
-    this.newsCollection = this.db.collection<any>("news");
-    this.lastNews = this.newsCollection.snapshotChanges().pipe(
-      map(actions =>
-        actions.map(a => {
-          const data = a.payload.doc.data() as any;
-          const id = a.payload.doc.id;
-          return { id, ...data };
-        })
-      )
-    );
+  constructor(private db: AngularFireDatabase) {
+    this.lastNews = this.db
+      .list("news")
+      .snapshotChanges()
+      .pipe(
+        map(changes =>
+          changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+        )
+      );
   }
-  // get all news
   getNews() {
     return this.lastNews;
   }
   getNew(id) {
-    this.newsDoc = this.db.doc(`news/${id}`);
-    this.new = this.newsDoc.valueChanges();
+    this.new = this.db.object(`news/${id}`).valueChanges();
     return this.new;
   }
 }

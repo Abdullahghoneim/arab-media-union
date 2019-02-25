@@ -8,7 +8,7 @@ import { NewsService } from "../../../services/News.Service";
 })
 export class LastNewsDetalisComponent implements OnInit {
   id: string;
-  lastNew;
+  new;
   constructor(
     private newsService: NewsService,
     private route: ActivatedRoute
@@ -16,8 +16,10 @@ export class LastNewsDetalisComponent implements OnInit {
 
   ngOnInit() {
     this.id = this.route.snapshot.params["id"];
-    this.newsService.getNew(this.id).subscribe(_new => {
-      this.lastNew = _new;
+    this.newsService.getNew(this.id).subscribe(newDetalis => {
+      console.log("coming from service", newDetalis);
+      this.new = newDetalis;
+      console.log("fucking new", this.new);
     });
   }
 }

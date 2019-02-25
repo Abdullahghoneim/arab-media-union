@@ -16,7 +16,10 @@ import { environment } from "../environments/environment";
 // services
 import { NewsService } from "../services/News.Service";
 import { LastNewsDetalisComponent } from "./components/last-news-detalis/last-news-detalis.component";
-
+import { HttpClientModule } from "@angular/common/http";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { NationalOfficesComponent } from './components/national-offices/national-offices.component';
+import { MediaLiberaryComponent } from './components/media-liberary/media-liberary.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +31,16 @@ import { LastNewsDetalisComponent } from "./components/last-news-detalis/last-ne
     LastNewsComponent,
     ConnectUsComponent,
     FooterComponent,
-    LastNewsDetalisComponent
+    LastNewsDetalisComponent,
+    NationalOfficesComponent,
+    MediaLiberaryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
