@@ -17,13 +17,19 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img [src]="lastNew[0].src" class="d-block w-100" alt="..." />
+            <img
+              src="../../../assets/img/32016735158625320167120526173971.jpg"
+              class="d-block w-100"
+              alt="اتحاد ااعلاميين العرب"
+            />
             <div class="carousel-caption d-none d-md-block">
-              <h5 class="title bg-success p-4">{{ lastNew[0].title }}</h5>
+              <h5 class="title bg-success p-4">
+                اتحاد الإعلاميين العرب: ندعم مصر فى حربها ضد الإرهاب
+              </h5>
             </div>
           </div>
           <div *ngFor="let ls of lastNew" class="carousel-item">
-            <img [src]="ls.src" class="d-block w-100" alt="..." />
+            <img [src]="ls.src" class="d-block w-100" [alt]="ls.title" />
             <div class="carousel-caption d-none d-md-block">
               <h5 class="title bg-success p-4">{{ ls.title }}</h5>
             </div>

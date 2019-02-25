@@ -1,6 +1,10 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireModule } from "@angular/fire/";
+import { FlashMessagesModule } from "angular2-flash-messages";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -11,17 +15,17 @@ import { AboutUsComponent } from "./components/about-us/about-us.component";
 import { LastNewsComponent } from "./components/last-news/last-news.component";
 import { ConnectUsComponent } from "./components/connect-us/connect-us.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { AngularFireModule } from "@angular/fire/";
+import { NationalOfficesComponent } from "./components/national-offices/national-offices.component";
+import { MediaLiberaryComponent } from "./components/media-liberary/media-liberary.component";
+import { PhotosLibComponent } from "./components/media-liberary/photos-lib/photos-lib.component";
+import { ViedosLibComponent } from "./components/media-liberary/viedos-lib/viedos-lib.component";
+import { LastNewsDetalisComponent } from "./components/last-news-detalis/last-news-detalis.component";
 import { environment } from "../environments/environment";
+import { FormsModule } from "@angular/forms";
 // services
 import { NewsService } from "../services/News.Service";
-import { LastNewsDetalisComponent } from "./components/last-news-detalis/last-news-detalis.component";
-import { HttpClientModule } from "@angular/common/http";
-import { AngularFireDatabaseModule } from "@angular/fire/database";
-import { NationalOfficesComponent } from './components/national-offices/national-offices.component';
-import { MediaLiberaryComponent } from './components/media-liberary/media-liberary.component';
-import { PhotosLibComponent } from './components/media-liberary/photos-lib/photos-lib.component';
-import { ViedosLibComponent } from './components/media-liberary/viedos-lib/viedos-lib.component';
+import { FlashMessagesService } from "angular2-flash-messages";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,9 +48,12 @@ import { ViedosLibComponent } from './components/media-liberary/viedos-lib/viedo
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireStorageModule,
+    FormsModule,
+    FlashMessagesModule
   ],
-  providers: [NewsService],
+  providers: [NewsService, FlashMessagesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -9,6 +9,7 @@ import { NationalOfficesComponent } from "./components/national-offices/national
 import { MediaLiberaryComponent } from "./components/media-liberary/media-liberary.component";
 import { PhotosLibComponent } from "./components/media-liberary/photos-lib/photos-lib.component";
 import { ViedosLibComponent } from "./components/media-liberary/viedos-lib/viedos-lib.component";
+
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "about-us", component: AboutUsComponent },
@@ -20,7 +21,7 @@ const routes: Routes = [
     path: "media-liberary",
     component: MediaLiberaryComponent,
     children: [
-      { path: "", redirectTo: "photos", pathMatch: "full" },
+      { path: "", redirectTo: "videos", pathMatch: "full" },
       { path: "videos", component: ViedosLibComponent },
       { path: "photos", component: PhotosLibComponent }
     ]
