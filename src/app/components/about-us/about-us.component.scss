@@ -1,14 +1,11 @@
 .about-us {
-  float: right;
-  h1,
-  h4,
-  p {
-    text-align: right;
-  }
   .text {
     text-align: right;
     line-height: 2rem;
     display: inline-block;
+  }
+  p{
+    font-weight: bold;
   }
   ul {
     display: inline-block;
@@ -16,5 +13,6 @@
   ul li {
     text-align: right;
     line-height: 3rem;
+    font-weight: bold;
   }
 }
