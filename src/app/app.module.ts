@@ -25,6 +25,7 @@ import { FormsModule } from "@angular/forms";
 // services
 import { NewsService } from "../services/News.Service";
 import { FlashMessagesService } from "angular2-flash-messages";
+import { MediaFormComponent } from './components/media-form/media-form.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FlashMessagesService } from "angular2-flash-messages";
     NationalOfficesComponent,
     MediaLiberaryComponent,
     PhotosLibComponent,
-    ViedosLibComponent
+    ViedosLibComponent,
+    MediaFormComponent
   ],
   imports: [
     BrowserModule,

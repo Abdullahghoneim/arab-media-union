@@ -9,6 +9,7 @@ import { NationalOfficesComponent } from "./components/national-offices/national
 import { MediaLiberaryComponent } from "./components/media-liberary/media-liberary.component";
 import { PhotosLibComponent } from "./components/media-liberary/photos-lib/photos-lib.component";
 import { ViedosLibComponent } from "./components/media-liberary/viedos-lib/viedos-lib.component";
+import { MediaFormComponent } from './components/media-form/media-form.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: "last-news/:id", component: LastNewsDetalisComponent },
   { path: "connect-us", component: ConnectUsComponent },
   { path: "national-offices", component: NationalOfficesComponent },
+  {path: 'survey', component: MediaFormComponent },
   {
     path: "media-liberary",
     component: MediaLiberaryComponent,
