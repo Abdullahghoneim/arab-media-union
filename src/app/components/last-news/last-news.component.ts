@@ -11,7 +11,7 @@ export class LastNewsComponent implements OnInit {
   constructor(private NewsService: NewsService) {}
   ngOnInit() {
     this.NewsService.getNews().subscribe(news => {
-      this.lastNews = news;
+      this.lastNews = news.reverse()
     });
   }
 }

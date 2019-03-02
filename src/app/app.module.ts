@@ -20,7 +20,7 @@ import { MediaLiberaryComponent } from "./components/media-liberary/media-libera
 import { PhotosLibComponent } from "./components/media-liberary/photos-lib/photos-lib.component";
 import { ViedosLibComponent } from "./components/media-liberary/viedos-lib/viedos-lib.component";
 import { LastNewsDetalisComponent } from "./components/last-news-detalis/last-news-detalis.component";
-import { environment } from "../environments/environment";
+import { environment } from "../environments/environment.prod";
 import { FormsModule } from "@angular/forms";
 // services
 import { NewsService } from "../services/News.Service";

@@ -16,16 +16,16 @@ export class NewsService {
       .list("news")
       .snapshotChanges()
       .pipe(
-        map(changes =>
-          changes.map(c => ({ key: c.payload.key, ...c.payload.val() }))
+        map(changes => 
+          changes.map(c => ({ key: c.payload.key, ...c.payload.val() })) 
         )
       );
   }
   getNews() {
-    return this.lastNews;
+    return this.lastNews
   }
   getNew(id) {
     this.new = this.db.object(`news/${id}`).valueChanges();
-    return this.new;
+    return this.new
   }
 }

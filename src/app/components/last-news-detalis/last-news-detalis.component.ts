@@ -17,9 +17,7 @@ export class LastNewsDetalisComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.params["id"];
     this.newsService.getNew(this.id).subscribe(newDetalis => {
-      console.log("coming from service", newDetalis);
       this.new = newDetalis;
-      console.log("fucking new", this.new);
     });
   }
 }

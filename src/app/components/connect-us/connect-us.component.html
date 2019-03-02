@@ -10,6 +10,7 @@
             name="name"
             [(ngModel)]="name"
             placeholder="الاسم "
+            required
           />
         </div>
         <div class="form-group">
@@ -42,9 +43,10 @@
             rows="3"
             class="form-control"
             placeholder="اترك لنا رسالة"
+            required
           ></textarea>
         </div>
-        <button class="btn btn-success btn-sm btn-block ">ارسل</button>
+        <button [disabled]="!f.valid" class="btn btn-success btn-sm btn-block ">ارسل</button>
       </form>
     </div>
   </div>

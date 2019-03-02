@@ -2,11 +2,14 @@
   h3,
   img,
   p {
-    float: right;
+    text-align: right;
   }
   p {
     text-align: right;
     line-height: 3rem;
     font-weight: bold;
   }
+}
+img {
+  display: block;
 }

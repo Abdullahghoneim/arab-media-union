@@ -8,5 +8,10 @@
   border-bottom: 2px solid green;
   display: inline-block;
   line-height: 5rem;
-  float: right;
+
 }
+@media screen and (max-width: 1000px) {
+  .news-title {
+    font-size: 15px !important;
+  }
+ }
