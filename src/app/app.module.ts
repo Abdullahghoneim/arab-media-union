@@ -25,7 +25,8 @@ import { FormsModule } from "@angular/forms";
 // services
 import { NewsService } from "../services/News.Service";
 import { FlashMessagesService } from "angular2-flash-messages";
-import { MediaFormComponent } from './components/media-form/media-form.component';
+import { MediaFormComponent } from "./components/media-form/media-form.component";
+import { ArabWorldService } from "src/services/arabWorld.service";
 
 @NgModule({
   declarations: [
@@ -55,7 +56,7 @@ import { MediaFormComponent } from './components/media-form/media-form.component
     FormsModule,
     FlashMessagesModule
   ],
-  providers: [NewsService, FlashMessagesService],
+  providers: [NewsService, FlashMessagesService, ArabWorldService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
